@@ -38,7 +38,7 @@ public class GreetController {
         User user = userDao.getForUsername(username);
         if (user != null) {
 			greeting = "Hello, " + user.getFirstName() + " " + user.getLastName() + " from node '"
-					+ System.getenv("HOSTNAME") + "', stored to cache on node '" + user.getCachedAtNode() + "'!";
+					+ System.getenv("HOSTNAME") + "', stored to cache on node '" + user.getCachedAtNode() + "'! Message changed";
         } else {
             greeting = "No such user exists!";
         }
